@@ -1,0 +1,342 @@
+/***
+cleancss: true
+***/
+
+/*
+ * Table of Contents:
+ *
+ * 1. - Home
+        1.1 - heading-slider
+        1.2 - starting-text
+        1.3 - reason for choice
+        1.4 - testimonial
+ * 2. - Service
+ * 3. - Doctor
+        3.1 - doctor-list
+        3.2 - job
+ * 4. - Blog
+ * 5. - FAQ
+ * 6. - Gallery
+ * 7. - Contact
+ * 8. - Costs
+ * -----------------------------------------------------------------------------
+ */
+
+@import 'palette';
+
+ * {outline: none !important;}
+
+/*============================================Global============================================ */
+ul li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.form-control, .input-group-addon {
+    border-radius: 0;
+}
+
+.title {
+    padding: 50px 0;
+    margin-top: 65px
+}
+
+a {
+    color: $greyish-green-3;
+}
+
+a:hover {
+    text-decoration: none;
+    color: $greyish-green-4;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    word-spacing: 0.24em;
+    font-size: 17px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.margin-top-05 { margin-top: 0.5em; }
+.margin-top-10 { margin-top: 1.0em; }
+.margin-top-15 { margin-top: 1.5em; }
+.margin-top-20 { margin-top: 2.0em; }
+.margin-top-25 { margin-top: 2.5em; }
+.margin-top-30 { margin-top: 3.0em; }
+
+.margin-bottom-05 { margin-bottom: 0.5em; }
+.margin-bottom-10 { margin-bottom: 1.0em; }
+.margin-bottom-15 { margin-bottom: 1.5em; }
+.margin-bottom-20 { margin-bottom: 2.0em; }
+.margin-bottom-25 { margin-bottom: 2.5em; }
+.margin-bottom-30 { margin-bottom: 3.0em; }
+
+.section-with-top-bottom-padding {
+    padding: 40px 0;
+}
+
+/* --------------------------------------  navs  ----------------------------------------------- */
+
+.logo-img
+{
+    height: 100px;
+}
+
+@media(max-width:768px){
+    .logo-img
+    {
+        height: 80px;
+    }
+}
+
+.nav.navbar-nav 
+{
+    padding: 0 20px; 
+    font-size: 1.2em;
+}
+
+.navbar-default
+{
+    background-color: transparent;
+    border-color: transparent;
+}
+#main-nav-bar {
+    background-color: transparent;
+    line-height: 1;
+}
+
+// .navbar-nav.navbar-right:last-child {
+//     margin-right: 0;
+// }
+
+// .navbar-default .navbar-nav li a 
+// {
+//     color: #fff;
+// }
+// .navbar-default .navbar-nav>.active
+// {
+//     background-color: $color-secondary-2-3;
+// }
+// .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus 
+// {
+//     color: #fff;
+// }
+// li:last-child 
+// {
+//     border-right: transparent;
+// }
+// .navbar-default .navbar-nav>li:hover, .navbar-default .navbar-nav>li:focus {
+//     background-color: $color-secondary-2-2;
+//     color: white;
+// }
+// .navbar-fixed-top .navbar-collapse
+// {
+//     max-height: 415px;
+// }
+
+// .navbar-collapse li {
+//     padding: 0;
+// }
+
+// .container-fluid 
+// {
+//     margin-left: 20px;
+// }
+// .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus
+// {
+//     color: #fff;
+//     background-color: transparent;
+// }
+// .navbar-default .navbar-nav>.active:hover 
+// {
+//     background-color: rgb(219, 178, 84);
+//     background-color: rgba(219, 178, 84, 0.62);
+//     border-bottom: none;
+// }
+
+// This surrounds all the main page content, so we set negative margin to make
+// nav overlay top of cottent
+.main-content {
+    margin-top: -120px;
+}
+
+.flat-btn
+{
+    background-color: #fff;
+    margin-top: 20px;
+    color: #46a1b4;
+    border-radius: 0;
+    font-size: 16px;
+    transition: all 0.3s ease-in;
+    padding: 13px 20px;
+    border: 2px solid #fff;
+}
+.flat-btn:hover 
+{
+    color: white;
+    background-color: #46a1b4;
+}
+
+/* ========================================= 1. Home============================================= */
+
+/* -------------------------------------- 1.1 heading-mainpage---------------------------------------- */
+
+section.heading-mainpage {
+    background: url(../img/OperatingTheatre.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mainpage-inner {
+    padding-top: 100px;
+    padding-bottom: 10em;
+}
+
+@media only screen and (min-width:768px){
+    .mainpage-inner {
+        padding-top: 140px;
+    }
+}
+
+.heading-mainpage {
+    color: white;
+}
+
+.cta_form {
+    display: inline-block;
+    padding: 14px;
+    background: #c8c8c8 none no-repeat scroll 0 0;
+    background-color: rgba(200, 200, 200, 0.6);
+    border-radius: 5px;
+    font-size: 0;
+    margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 480px) {
+    .form-inline .form-group .cta-form-email {
+        width:420px;
+        margin-right: 20px;
+    }
+}
+
+.welcome-section
+{
+    background-color: $color-secondary-1-1;
+    padding-bottom: 4em;
+}
+.welcome 
+{
+    padding: 48px 68px;
+    text-align: center;
+}
+.welcome-title 
+{
+    font-size: 50px;
+    padding-bottom: 15px;
+    color: #020202;
+}
+.welcome-txt 
+{
+    font-size: 18px;
+    color: #0f0f0f;
+    line-height: 35px;
+    margin-bottom: 26px;
+    padding-top: 26px;
+    letter-spacing: 1px;
+}
+
+/* ============================================Footer=========================================== */
+#footer
+{
+    background-color: #085A6C;
+    padding: 25px 0;
+}
+.copy-right-text
+{
+    color: #fff;
+    font-size: 13px;
+    padding-top: 25px;
+}
+
+.copy-right-text a {
+    color: #dadada;
+}
+
+#footer ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+/* =========================================Media Query========================================= */
+
+@media (min-width: 1200px){
+    .navbar-collapse.collapse 
+    {
+        display: block!important;
+        height: auto!important;
+        /* padding: 10px 0; */
+        overflow: visible!important;
+    }
+}
+    
+@media (min-width: 1200px){
+    .navbar-collapse 
+    {
+        width: auto;
+        border-top: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 991px){
+    .slider-inner-text {
+        margin: 162px 0;
+    }
+}
+
+@media (max-width: 767px){
+    .slider-inner-text {
+        margin: 162px 58px;
+        width: 62%;
+    }
+}
+
+@media (max-width: 505px){
+    section.content main .info li:not(:last-child) 
+    {
+        margin: 0 27px 10px 0;
+    }   
+    section.content main .info li 
+    {
+        border: 0 !important;
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+    .slider-inner h1{
+        font-size: 50px;
+    }
+    .slider-inner-text {
+        margin: 162px 13px;
+    }
+    .slider-inner-text p
+    {
+        font-size: 19px;
+    }
+    .welcome {
+        padding: 48px 20px;
+    }
+}
+@media(max-width: 319px) {
+    .heading-slider {
+        display: none;
+    }
+}

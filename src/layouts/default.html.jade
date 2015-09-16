@@ -1,0 +1,73 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Surrey Vascular Surgeon
+
+    != getBlock('styles').add(['/css/bootstrap.min.css','/css/font-awesome.min.css','/css/main.min.css']).toHTML()
+
+    <!--[if lt IE 9]>
+    <script type='text/javascript' src='/js/respond.min.js'></script>
+    <script type='text/javascript' src='/js/html5shiv.js'></script>
+    <script type='text/javascript' src='/js/ie_fix.js'></script>
+    <![endif]-->
+
+    link(rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png")
+    link(rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png")
+    link(rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png")
+    link(rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png")
+    link(rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png")
+    link(rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png")
+    link(rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png")
+    link(rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png")
+    link(rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196")
+    link(rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96")
+    link(rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32")
+    link(rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16")
+    link(rel="icon" type="image/png" href="favicon-128.png" sizes="128x128")
+    meta(name="application-name" content="Surrey Vascular Surgeon")
+    meta(name="msapplication-TileColor" content="#FFFFFF")
+    meta(name="msapplication-TileImage" content="mstile-144x144.png")
+    meta(name="msapplication-square70x70logo" content="mstile-70x70.png")
+    meta(name="msapplication-square150x150logo" content="mstile-150x150.png")
+    meta(name="msapplication-wide310x150logo" content="mstile-310x150.png")
+    meta(name="msapplication-square310x310logo" content="mstile-310x310.png")
+
+    link(href='http://fonts.googleapis.com/css?family=Abel', rel='stylesheet', type='text/css')
+    //-
+      <link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700' rel='stylesheet' type='text/css'>
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,500', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300', rel='stylesheet', type='text/css')
+
+  body
+    != partial('nav')
+
+    .main-content
+      != content
+
+    section#footer
+      .container
+        .row
+          .col-md-6.col-md-offset-3
+            ul.text-center.contact.footer-social
+              //- li.socials-icons
+              //-   a.facebook(href='https://www.facebook.com/pages/Surrey-Vein-Clinic/407360749282803', data-toggle='tooltip', title='Facebook')
+              //-     i.fa.fa-facebook
+              li.socials-icons
+                a.twitter(href='https://twitter.com/nevilledastur', data-toggle='tooltip', title='Twitter')
+                  i.fa.fa-twitter
+              //- li.socials-icons
+              //-   a.google-plus(href='#', data-toggle='tooltip', title='Share in Google +')
+              //-     i.fa.fa-google-plus
+        .row
+          .col-md-12
+            .copy-right-text.text-center
+              | Copyright 2015 &copy; Surrey Vascular Surgeon.
+              br
+              | Site Built by #[a(href="http://www.clinsoftsolutions.com") Clinical Software Solutions]
+
+    != getBlock('scripts').add(['/js/jquery.min.js','/js/bootstrap.min.js','/js/ga.js'].concat(document.scripts||[])).toHTML()
