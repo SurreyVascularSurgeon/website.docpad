@@ -336,12 +336,18 @@ section.heading-mainpage {
 {
     background-color: #085A6C;
     padding: 25px 0;
+    color: #fff;
 }
+
+#footer-social-section {
+  padding-top: 26px;
+}
+
 .copy-right-text
 {
     color: #fff;
     font-size: 13px;
-    padding-top: 25px;
+    padding-top: 6px;
 }
 
 .copy-right-text a {
@@ -353,6 +359,37 @@ section.heading-mainpage {
     list-style: none;
 }
 
+#footer ul {
+    padding: 0;
+}
+
+.socials-icons a
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: darkcyan;
+    float: left;
+    color: white;
+    padding-top: 3px;
+    font-size: 20px;
+}
+
+.footer-contacts h4 {
+  font-size: 1.6em;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.footer-contacts h5 {
+  font-size: 1.6em;
+  padding-top: 15px;
+}
+
+.footer-contacts p {
+  font-size: 1em;
+}
 /* =========================================Media Query========================================= */
 
 @media (min-width: 1200px){

@@ -49,25 +49,6 @@ html
     .main-content
       != content
 
-    section#footer
-      .container
-        .row
-          .col-md-6.col-md-offset-3
-            ul.text-center.contact.footer-social
-              //- li.socials-icons
-              //-   a.facebook(href='https://www.facebook.com/pages/Surrey-Vein-Clinic/407360749282803', data-toggle='tooltip', title='Facebook')
-              //-     i.fa.fa-facebook
-              li.socials-icons
-                a.twitter(href='https://twitter.com/nevilledastur', data-toggle='tooltip', title='Twitter')
-                  i.fa.fa-twitter
-              //- li.socials-icons
-              //-   a.google-plus(href='#', data-toggle='tooltip', title='Share in Google +')
-              //-     i.fa.fa-google-plus
-        .row
-          .col-md-12
-            .copy-right-text.text-center
-              | Copyright 2015 &copy; Surrey Vascular Surgeon.
-              br
-              | Site Built by #[a(href="http://www.clinsoftsolutions.com") Clinical Software Solutions]
-
+    != partial('footer')
+    
     != getBlock('scripts').add(['/js/jquery.min.js','/js/bootstrap.min.js','/js/ga.js'].concat(document.scripts||[])).toHTML()
