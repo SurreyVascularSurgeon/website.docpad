@@ -19,7 +19,13 @@ section.navs
             a(href='/') Home
 
           li(class=document.TopMenuCategory==="Treatments"?"active":"")
-            a(href='/treatments.html') Treatments
+            a.dropdown-toggle(href='#' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Treatments
+              span.caret
+
+            ul.dropdown-menu
+              li
+                a(href='#') Abdominal Aortic Aneursym
+                a(href='#') Varicose Veins
 
           li(class=document.TopMenuCategory==="FAQs"?"active":"")
             a(href='/faq.html') FAQs

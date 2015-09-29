@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 8px 18px 8px 18px;
   display: block;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   font-size: 16px;
 }
 .navbar-default li.active {
@@ -189,6 +189,19 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
   display: block;
   background: #1e6468;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+    color:#428bca;
+}
+
+.navbar-nav>li>.dropdown-menu {
+  margin-top: 6px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;  
 }
 
 // .navbar-nav.navbar-right:last-child {
