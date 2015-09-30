@@ -1,16 +1,15 @@
 section.navs
   nav.navbar.navbar-default.navbar-static-top(role='navigation')
     .container
-      a.pull-left(href="/")
-        img.logo-img(src="/img/logo.png")
-      //- Brand and toggle get grouped for better mobile display
       .navbar-header
         button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#main-nav-bar')
           span.sr-only Toggle navigation
           span.icon-bar
           span.icon-bar
           span.icon-bar
-
+        a.pull-left(href="/")
+            img.logo-img(src="/img/logo.png")
+    
       //- Collect the nav links, forms, and other content for toggling
       #main-nav-bar.collapse.navbar-collapse
 
@@ -32,6 +31,4 @@ section.navs
 
           li(class=document.TopMenuCategory==="Contact"?"active":"")
             a(href='/contact.html') Contact
-      //- navbar-collapse
-    //- container-fluid
 
