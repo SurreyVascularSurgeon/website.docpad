@@ -22,17 +22,22 @@ cleancss: true
  * -----------------------------------------------------------------------------
  */
 
+
 @import 'palette';
 
- * {outline: none !important;}
+//- Options light, dark [default]
+$theme: light;
+$logo-desktop-heigth: 70px;
+
+* {outline: none !important;}
 
 /*============================================Global============================================ */
-ul li {
-    list-style: none;
+a:hover {
+ text-decoration: none;
 }
 
-li a {
-    text-decoration: none;
+ul li {
+    list-style: none;
 }
 
 .form-control, .input-group-addon {
@@ -44,15 +49,15 @@ li a {
     margin-top: 65px
 }
 
-a {
-    color: $greyish-green-3;
-}
+@if $theme == dark {
+  a {
+      color: $greyish-green-3;
+  }
 
-a:hover {
-    text-decoration: none;
-    color: $greyish-green-4;
+  a:hover {
+      color: $greyish-green-4;
+  }
 }
-
 p {
     font-family: 'Roboto', sans-serif;
     word-spacing: 0.24em;
@@ -86,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo-img
 {
-    height: 100px;
+    height: $logo-desktop-heigth;
 }
 
 .nav.navbar-nav 
@@ -253,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
 @media(max-width:768px){
     .logo-img
     {
-        height: 80px;
+        height: 60px;
     }
 
     .navbar {
@@ -267,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
 //- but only for desktop otherwise messes up mobile collapsable menu
 @media(min-width:767px){
   .main-content {
-      margin-top: -120px;
+      margin-top: -$logo-desktop-heigth - 22px;
   }
 }
 
@@ -293,7 +298,12 @@ h1, h2, h3, h4, h5, h6 {
 /* -------------------------------------- 1.1 heading-mainpage---------------------------------------- */
 
 section.heading-mainpage {
-    background: url(../img/OperatingTheatre.jpg);
+    @if $theme == light {
+      background: url(../img/OperatingTheatreLight.jpg);
+    }
+    @else {
+      background: url(../img/OperatingTheatre.jpg);      
+    }
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -310,7 +320,12 @@ section.heading-mainpage {
 }
 
 .heading-mainpage {
-    color: white;
+    @if $theme == light {
+      color: black;
+    }
+    @else {
+      color: white;
+    }
 }
 
 .cta_form {
@@ -354,6 +369,17 @@ section.heading-mainpage {
     margin-bottom: 26px;
     padding-top: 26px;
     letter-spacing: 1px;
+}
+
+/* ======================================= Associations ======================================== */
+section.associations {
+  background-color: white;
+  padding: 10px 0;
+}
+
+.association-img {
+  height: 70px;
+  padding: 8px 0;
 }
 
 /* ============================================Footer=========================================== */

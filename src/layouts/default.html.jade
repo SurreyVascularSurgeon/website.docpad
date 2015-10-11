@@ -51,5 +51,7 @@ html
       != content
 
     != partial('footer')
+
+    != partial('associations')
     
     != getBlock('scripts').add(['/js/jquery.min.js','/js/bootstrap.min.js','/js/ga.js'].concat(document.scripts||[])).toHTML()
