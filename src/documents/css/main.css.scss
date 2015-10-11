@@ -26,7 +26,7 @@ cleancss: true
 @import 'palette';
 
 //- Options light, dark [default]
-$theme: dark;
+$theme: light;
 $logo-desktop-heigth: 70px;
 
 * {outline: none !important;}
@@ -151,10 +151,15 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
   padding: 8px 18px 8px 18px;
   display: block;
-  text-decoration: none;
-  color: #fff;
+  @if $theme == dark {
+    color: #fff;
+  }
+  @if $theme == light {
+    color: #222;
+  }
   font-size: 16px;
 }
+
 .navbar-default li.active {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -162,6 +167,13 @@ h1, h2, h3, h4, h5, h6 {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
+
+@if $theme == light {
+  .navbar-default .navbar-nav>.active>a {
+    background-color: #a7a7a7;
+  }
+}
+
 .navbar-default .navbar-nav>.active {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -169,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
   -o-border-radius: 5px;
   border-radius: 5px;
   display: block;
-  background: #1e6468;
+  background-color: #1f1f1f;
 }
 
 .navbar-default .navbar-nav>li:hover, .navbar-default .navbar-nav>li:focus {
