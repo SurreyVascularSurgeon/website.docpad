@@ -87,6 +87,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 40px 0;
 }
 
+section {
+  background-color: white;
+}
+
 /* --------------------------------------  navs  ----------------------------------------------- */
 
 .logo-img
@@ -397,6 +401,16 @@ section.heading-mainpage {
     .treatments-inner {
         padding-top: 140px;
     }
+}
+
+/* ======================================= About ======================================== */
+
+section.about {
+  padding: 20px 0;
+}
+
+.profile-img {
+  border: 2px solid grey;
 }
 
 /* ======================================= Associations ======================================== */
