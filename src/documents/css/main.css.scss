@@ -388,6 +388,17 @@ section.heading-mainpage {
     letter-spacing: 1px;
 }
 
+.treatments-inner {
+    padding-top: 100px;
+    padding-bottom: 10em;
+}
+
+@media only screen and (min-width:768px){
+    .treatments-inner {
+        padding-top: 140px;
+    }
+}
+
 /* ======================================= Associations ======================================== */
 section.associations {
   background-color: white;
