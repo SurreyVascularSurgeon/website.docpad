@@ -91,6 +91,10 @@ section {
   background-color: white;
 }
 
+.border-img {
+  border: 2px solid grey;
+}
+
 /* --------------------------------------  navs  ----------------------------------------------- */
 
 .logo-img
@@ -407,10 +411,6 @@ section.heading-mainpage {
 
 section.about {
   padding: 20px 0;
-}
-
-.profile-img {
-  border: 2px solid grey;
 }
 
 /* ======================================= Associations ======================================== */
