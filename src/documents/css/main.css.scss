@@ -325,7 +325,6 @@ section {
 /* ========================================= 1. Home============================================= */
 
 /* -------------------------------------- 1.1 heading-mainpage---------------------------------------- */
-
 section.heading-mainpage {
     @if $theme == light {
       background: url(../img/OperatingTheatreLight.jpg);
@@ -412,7 +411,6 @@ section.heading-mainpage {
 }
 
 /* ======================================= About ======================================== */
-
 section.about {
   padding: 20px 0;
 }
@@ -427,6 +425,19 @@ section.associations {
   height: 70px;
   padding: 8px 0;
 }
+
+/* ======================================= Contact Us ======================================== */
+section.contact-us-header {
+    background: url(../img/contact_us.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-us-header-wrapper {
+    padding-top: 100px;
+    padding-bottom: 10em;
+}
+
 
 /* ============================================Footer=========================================== */
 #footer

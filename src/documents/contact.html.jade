@@ -1,0 +1,47 @@
+---
+title: "Contact"
+layout: "default"
+TopMenuCategory: "Contact"
+priority: 1.0
+---
+
+block content
+  section.contact-us-header
+    .contact-us-header-wrapper
+      .container
+        .row
+          div
+            h1.text-center Contact Us
+
+  section.contact-content.section-with-top-bottom-padding
+    .container
+      .row
+        .col-md-8
+          .quick-contact
+            h3 Main Office Contact Details
+            hr
+            .row
+              .col-md-6
+                .row
+                  .col-md-2
+                    p
+                      i.fa.fa-home
+                  .col-md-10
+                    p
+                      | Full Address:<br/>
+                      | 2nd Floor<br/> 
+                      | The Parkside Suite<br/>
+                      | Frimley Park Hospital<br/>
+                      | Portsmouth Road<br/>
+                      | Camberley<br/>
+                      | GU16 7UJ
+              .col-md-6
+                p
+                  i.fa.fa-phone
+                  span Telephone: <a href="tel:0800 020 9511">0800 020 9511</a>
+                p
+                  i.fa.fa-fax
+                  span Fax: 01276 526868
+
+        .col-md-4
+          != partial('booking_form')
