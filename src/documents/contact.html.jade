@@ -2,6 +2,7 @@
 title: "Contact"
 layout: "default"
 TopMenuCategory: "Contact"
+scripts: ['contact.js']
 priority: 1.0
 ---
 
@@ -11,12 +12,12 @@ block content
       .container
         .row
           div
-            h1.text-center Contact Us
+            h1.text-center Contact
 
   section.contact-content.section-with-top-bottom-padding
     .container
       .row
-        .col-md-8
+        .col-md-6
           .quick-contact
             h3 Main Office Contact Details
             hr
@@ -28,9 +29,8 @@ block content
                       i.fa.fa-home
                   .col-md-10
                     p
-                      | Full Address:<br/>
-                      | 2nd Floor<br/> 
-                      | The Parkside Suite<br/>
+                      | c/o Denise Metcalfe
+                      | 2nd Floor, The Parkside Suite<br/>
                       | Frimley Park Hospital<br/>
                       | Portsmouth Road<br/>
                       | Camberley<br/>
@@ -43,5 +43,81 @@ block content
                   i.fa.fa-fax
                   span Fax: 01276 526868
 
-        .col-md-4
-          != partial('booking_form')
+        .col-md-6
+          h3 Online Contact
+          hr
+          .row
+            form#contact_form.well.form-horizontal(action=' ', method='post')
+              fieldset
+                .form-group
+                  label.col-md-4.control-label Full Name
+                  .col-md-8.inputGroupContainer
+                    .input-group
+                      span.input-group-addon
+                        i.glyphicon.glyphicon-user
+                      input.form-control(name='full_name', placeholder='Full Name', type='text')
+
+                .form-group
+                  label.col-md-4.control-label E-Mail
+                  .col-md-8.inputGroupContainer
+                    .input-group
+                      span.input-group-addon
+                        i.glyphicon.glyphicon-envelope
+                      input.form-control(name='email', placeholder='E-Mail Address', type='text')
+
+                .form-group
+                  label.col-md-4.control-label Phone
+                  .col-md-8.inputGroupContainer
+                    .input-group
+                      span.input-group-addon
+                        i.glyphicon.glyphicon-earphone
+                      input.form-control(name='phone', placeholder='Phone number ...', type='text')
+
+                .form-group
+                  label.col-md-4.control-label Contact reason
+                  .col-md-8.selectContainer
+                    .input-group
+                      span.input-group-addon
+                        i.glyphicon.glyphicon-list
+                      select.form-control.selectpicker(name='state')
+                        option(value=' ') Please select reason for contact
+                        option Abdominal Aortic Aneursym
+                        option Carotid Surgery for Stroke
+                        option Varicose veins
+
+                .form-group
+                  label.col-md-4.control-label Clinic Type
+                  .col-md-8
+                    .radio
+                      label
+                        input(type='radio', name='clinic_type', value='nhs')
+                        |  NHS
+                    .radio
+                      label
+                        input(type='radio', name='clinic_type', value='private')
+                        |  Private
+
+                .form-group
+                  label.col-md-4.control-label Message
+                  .col-md-8.inputGroupContainer
+                    .input-group
+                      span.input-group-addon
+                        i.glyphicon.glyphicon-pencil
+                      textarea.form-control(name='comment', placeholder='Message ...')
+
+                #contact-success.alert.alert-success.collapse(role='alert')
+                  | Success 
+                  i.glyphicon.glyphicon-thumbs-up
+                  |  Thanks for contacting us, we will get back to you shortly.
+
+                #contact-fail.alert.alert-danger.collapse(role='alert')
+                  | Failed to send.
+                  | Thank you for trying to contacting us, unfortunitly the message did not send. Please try again later.
+
+                .form-group
+                  label.col-md-4.control-label
+                  .col-md-8
+                    button.btn.btn-warning(type='submit')
+                      | Send 
+                      span.glyphicon.glyphicon-send
+
