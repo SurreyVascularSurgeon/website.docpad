@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $("#booking-form").on("submit", function(e) {
+    $("#contact_form").on("submit", function(e) {
         e.preventDefault();
         console.log("Sending Message");
 
