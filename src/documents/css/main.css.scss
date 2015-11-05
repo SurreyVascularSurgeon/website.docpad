@@ -27,7 +27,8 @@ cleancss: true
 
 //- Options light, dark [default]
 $theme: light;
-$logo-desktop-heigth: 80px;
+$logo-desktop-height: 80px;
+$logo-mobile-height: $logo-desktop-height*0.75;
 
 * {outline: none !important;}
 
@@ -104,7 +105,7 @@ section {
 
 .logo-img
 {
-    height: $logo-desktop-heigth;
+    height: $logo-desktop-height;
 }
 
 .nav.navbar-nav 
@@ -283,7 +284,7 @@ section {
 @media(max-width:768px){
     .logo-img
     {
-        height: 60px;
+        height: $logo-mobile-height;
     }
 
     .navbar {
@@ -302,7 +303,7 @@ section {
 //- but only for desktop otherwise messes up mobile collapsable menu
 @media(min-width:767px){
   .main-content {
-      margin-top: -$logo-desktop-heigth - 22px;
+      margin-top: -$logo-desktop-height - 22px;
   }
 }
 
@@ -429,6 +430,7 @@ section.associations {
 
 /* ======================================= Treatments ======================================== */
 section.heading-treatments {
+    margin-top: $logo-desktop-height + 20px;
     background: url(../img/surgery-688380.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -440,10 +442,13 @@ section.heading-treatments {
     padding-bottom: 10em;
 }
 
-@media only screen and (min-width:768px){
-    .treatments-inner {
-        padding-top: 140px;
-    }
+@media only screen and (max-width:768px){
+  .treatments-inner {
+      padding-top: 140px;
+  }
+  section.heading-treatments {
+      margin-top: 0;
+  }
 }
 
 .content-treatments {
