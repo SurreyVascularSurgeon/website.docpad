@@ -13,7 +13,8 @@
     "docpad-plugin-livereload": "*",
     "docpad-plugin-marked": "*",
     "docpad-plugin-nodesass": "2.x.x",
-    "docpad-plugin-partials": "*"
+    "docpad-plugin-partials": "*",
+    "marked": "^0.3.5"
   },
   "main": "node_modules/.bin/docpad-server",
   "scripts": {
