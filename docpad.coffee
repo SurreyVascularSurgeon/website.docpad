@@ -50,6 +50,12 @@ docpadConfig = {
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
 
+	# Custom Collections
+	collections:
+		# Define a custom collection for cleanurls that only includes documents we want
+    	cleanurls: ->
+        	@getCollection('html').findAllLive(cleanurls: $eq: true)
+
 	plugins:
 		ghpages:
 			deployRemote: 'target'
@@ -60,10 +66,8 @@ docpadConfig = {
 			writeAfter: false
 			generateAfter: []
 			warnOnError: true
-			
 		cleanurls:
-			static: false
-			enabled: false
+			collectionName: 'cleanurls'
 			simpleRedirects:
 				'/dl': '/dl.html'
 				'/aaa': '/abdominal-aortic-aneurysm.html'
@@ -94,10 +98,12 @@ docpadConfig = {
 				# Set to true to get minification statistics under stats property
 				debug: false
 
-			# Disabled on development environments by default.
-			environments:
-				development:
-					enabled: true
+		# Disabled on development environments by default.
+		environments:
+			development:
+				plugins:
+					cleancss:
+						enabled: true
 }
 
 # Export the DocPad Configuration
