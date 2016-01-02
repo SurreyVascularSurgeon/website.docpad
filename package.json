@@ -7,6 +7,7 @@
   "dependencies": {
     "docpad": "6.x.x",
     "docpad-plugin-cleancss": "2.x.x",
+    "docpad-plugin-cleanurls": "2.x.x",
     "docpad-plugin-ghpages": "*",
     "docpad-plugin-grunt": "2.x.x",
     "docpad-plugin-jade": "*",
@@ -14,7 +15,7 @@
     "docpad-plugin-marked": "*",
     "docpad-plugin-nodesass": "2.x.x",
     "docpad-plugin-partials": "*",
-    "marked": "^0.3.5"
+    "marked": "0.3.x"
   },
   "main": "node_modules/.bin/docpad-server",
   "scripts": {

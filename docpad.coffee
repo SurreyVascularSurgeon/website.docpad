@@ -60,6 +60,11 @@ docpadConfig = {
 	    	writeAfter: false
 	    	generateAfter: []
 	    	warnOnError: true
+	    cleanurls:
+        	simpleRedirects:
+            	'/aaa': '/abdominal-aortic-aneurysm'
+            	'/cea': '/carotid-surgery'
+            	'/carotid': '/carotid-surgery'
 		cleancss:
 	        # These are options passed to the clean-css dependency
 	        cleancssOpts:
