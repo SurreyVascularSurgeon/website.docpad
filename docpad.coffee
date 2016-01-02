@@ -51,48 +51,53 @@ docpadConfig = {
 			@site.keywords.concat(@document.keywords or []).join(', ')
 
 	plugins:
-	    ghpages:
-	        deployRemote: 'target'
-	        deployBranch: 'master'
-	    nodesass:
-	    	outputStyle: 'compressed'	# nested / compressed
-	    grunt:
-	    	writeAfter: false
-	    	generateAfter: []
-	    	warnOnError: true
-	    cleanurls:
-        	simpleRedirects:
-            	'/aaa': '/abdominal-aortic-aneurysm'
-            	'/cea': '/carotid-surgery'
-            	'/carotid': '/carotid-surgery'
+		ghpages:
+			deployRemote: 'target'
+			deployBranch: 'master'
+		nodesass:
+			outputStyle: 'compressed'	# nested / compressed
+		grunt:
+			writeAfter: false
+			generateAfter: []
+			warnOnError: true
+		alias_disable:
+			hard: false
+			symlink: true
+			aliases: {
+				'/aaa': '/abdominal-aortic-aneurysm.html'
+				'/cea': '/carotid-surgery.html'
+				'/carotid': '/carotid-surgery.html'
+			}
+			extensions: [ 'html' ]
+
 		cleancss:
-	        # These are options passed to the clean-css dependency
-	        cleancssOpts:
-	            # * for keeping all (default), 1 for keeping first one only, 0 for removing all
-	            keepSpecialComments: '0'
+			# These are options passed to the clean-css dependency
+			cleancssOpts:
+				# * for keeping all (default), 1 for keeping first one only, 0 for removing all
+				keepSpecialComments: '0'
 
-	            # Whether to keep line breaks
-	            keepBreaks: false
+				# Whether to keep line breaks
+				keepBreaks: false
 
-	            # Turns on benchmarking mode measuring time spent on cleaning up.
-	            benchmark: true
+				# Turns on benchmarking mode measuring time spent on cleaning up.
+				benchmark: true
 
-	            # Whether to process @import rules.
-	            processImport: false
+				# Whether to process @import rules.
+				processImport: false
 
-	            # Set to false to skip URL rebasing
-	            rebase: false
+				# Set to false to skip URL rebasing
+				rebase: false
 
-	            # Set to false to disable advanced optimizations
-	            advanced: false
+				# Set to false to disable advanced optimizations
+				advanced: false
 
-	            # Set to true to get minification statistics under stats property
-	            debug: false
+				# Set to true to get minification statistics under stats property
+				debug: false
 
-	        # Disabled on development environments by default.
-	        environments:
-	            development:
-	                enabled: true
+			# Disabled on development environments by default.
+			environments:
+				development:
+					enabled: true
 }
 
 # Export the DocPad Configuration
