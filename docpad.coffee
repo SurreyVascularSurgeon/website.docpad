@@ -60,15 +60,15 @@ docpadConfig = {
 			writeAfter: false
 			generateAfter: []
 			warnOnError: true
-		alias_disable:
-			hard: false
-			symlink: true
-			aliases: {
+			
+		cleanurls:
+			static: false
+			enabled: false
+			simpleRedirects:
+				'/dl': '/dl.html'
 				'/aaa': '/abdominal-aortic-aneurysm.html'
 				'/cea': '/carotid-surgery.html'
 				'/carotid': '/carotid-surgery.html'
-			}
-			extensions: [ 'html' ]
 
 		cleancss:
 			# These are options passed to the clean-css dependency
