@@ -434,7 +434,7 @@ section.heading-treatments {
     background: url(../img/surgery-688380.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
+    color: black;
 }
 
 .heading-treatments-inner {
@@ -449,6 +449,14 @@ section.heading-treatments {
   section.heading-treatments {
       margin-top: 0;
   }
+}
+
+.heading-treatments h1 {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 0.5em;
+  font-size: 3em;
+  line-height: 120%;
 }
 
 .content-treatments {
@@ -483,6 +491,7 @@ section.heading-dl {
 }
 
 .heading-dl h1 {
+  display: inline-block;
   background-color: #f0f0f0;
   padding: 0.5em;
   font-size: 3em;
