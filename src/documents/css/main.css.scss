@@ -469,6 +469,10 @@ section.heading-dl {
   //- background: url(../img/dl/amida-spa-farnham-banner.jpg);
   //- background-size: cover;
   //- background-repeat: no-repeat;
+  border-radius: 5px;
+  -webkit-box-shadow: 6px 6px 5px 0px rgba(173,173,173,0.65);
+  -moz-box-shadow: 6px 6px 5px 0px rgba(173,173,173,0.65);
+  box-shadow: 6px 6px 5px 0px rgba(173,173,173,0.65);
 }
 
 .amidaspa-content {
