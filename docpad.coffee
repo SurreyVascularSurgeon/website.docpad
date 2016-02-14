@@ -55,7 +55,7 @@ docpadConfig = {
 		# Define a custom collection for cleanurls that only includes documents we want
     	cleanurls: ->
         	@getCollection('html').findAllLive(cleanurls: $eq: true)
-
+        	
 	plugins:
 		ghpages:
 			deployRemote: 'target'
@@ -66,13 +66,13 @@ docpadConfig = {
 			writeAfter: false
 			generateAfter: []
 			warnOnError: true
-		cleanurls:
-			collectionName: 'cleanurls'
-			simpleRedirects:
-				# '/dl': '/dl.html'
-				# '/aaa': '/abdominal-aortic-aneurysm.html'
-				# '/cea': '/carotid-surgery.html'
-				# '/carotid': '/carotid-surgery.html'
+		# cleanurls:
+			# collectionName: 'cleanurls'
+			# simpleRedirects:
+			# '/dl': '/dl.html'
+			# '/aaa': '/abdominal-aortic-aneurysm.html'
+			# '/cea': '/carotid-surgery.html'
+			# '/carotid': '/carotid-surgery.html'
 
 		cleancss:
 			# These are options passed to the clean-css dependency
