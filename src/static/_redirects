@@ -1,6 +1,5 @@
 # Simple redirects from one path to another
 /home       /
-/dl	 		/dl.html
 /aaa 		/abdominal-aortic-aneurysm.html
 /cea 		/carotid-surgery.html
 /carotid 	/carotid-surgery.html
