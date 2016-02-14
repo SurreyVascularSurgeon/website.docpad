@@ -62,10 +62,10 @@ docpadConfig = {
 			deployBranch: 'master'
 		nodesass:
 			outputStyle: 'compressed'	# nested / compressed
-		grunt:
-			writeAfter: false
-			generateAfter: []
-			warnOnError: true
+		# grunt:
+			# writeAfter: false
+			# generateAfter: []
+			# warnOnError: true
 		# cleanurls:
 			# collectionName: 'cleanurls'
 			# simpleRedirects:
