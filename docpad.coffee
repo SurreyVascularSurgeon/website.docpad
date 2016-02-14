@@ -69,10 +69,10 @@ docpadConfig = {
 		cleanurls:
 			collectionName: 'cleanurls'
 			simpleRedirects:
-				'/dl': '/dl.html'
-				'/aaa': '/abdominal-aortic-aneurysm.html'
-				'/cea': '/carotid-surgery.html'
-				'/carotid': '/carotid-surgery.html'
+				# '/dl': '/dl.html'
+				# '/aaa': '/abdominal-aortic-aneurysm.html'
+				# '/cea': '/carotid-surgery.html'
+				# '/carotid': '/carotid-surgery.html'
 
 		cleancss:
 			# These are options passed to the clean-css dependency

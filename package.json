@@ -7,7 +7,6 @@
   "dependencies": {
     "docpad": "6.x.x",
     "docpad-plugin-cleancss": "2.x.x",
-    "docpad-plugin-cleanurls": "2.x.x",
     "docpad-plugin-ghpages": "*",
     "docpad-plugin-grunt": "2.x.x",
     "docpad-plugin-jade": "*",
