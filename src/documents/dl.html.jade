@@ -18,12 +18,12 @@ block content
               br
               | Amida Spa David Lloyd
 
-  section.content-dl
+  section.content-dl(itemscope itemtype="http://schema.org/MedicalCondition")
     .contents-inner
       .container
         .row
           .col-md-9.col-sm-6
-            h2 Flare, Thread, Spider and Varicose Vein Treatments
+            h2 <span itemprop="name">Flare, Thread, Spider and Varicose Vein</span> Treatments
             p
               | Within the relaxing environment of the Amida Spa Farnham I offer treatment for flare, thread, spider and
               | varicose veins. Open to David Lloyd members as well as Non-Members.
@@ -36,9 +36,13 @@ block content
             img.img-responsive.pull-right(src="/img/dl/amida-spa-farnham-room.png" width="300" alt="David Lloyd Amida Spa Rooms")
 
             h3 What are Spider, Flare Veins
-            p
+            p(itemprop="signOrSymptom" itemscope itemtype="http://schema.org/MedicalSymptom")
               | Flare veins (also known as thread or broken veins) are tiny surface veins that can appear blue, red
               | or pale green. They can be on any part of the body but are most commonly treated on the legs and face.
+              | They 
+              span(itemprop="name") ache 
+              | and sometimes 
+              span(itemprop="name") itch.
 
             p We offer treatment with Micro Sclerotherapy.
             
@@ -49,7 +53,8 @@ block content
               | injection sclerotherapy too. This will be discussed during your consultation.
 
 
-            h3 Vein Sclerotherapy
+            h3(itemprop="possibleTreatment" itemscope itemtype="http://schema.org/MedicalTherapy")
+              span(itemprop="name") Vein Sclerotherapy
             p
               | Sclerotherapy involves injecting a small volume of a irritant liquid into affected veins. The liquid acts
               | upon the lining of the vein to cause it to seal shut, eliminating the visibility of the  vein. Sclerotherapy
