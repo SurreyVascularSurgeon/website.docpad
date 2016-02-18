@@ -174,11 +174,11 @@ block content
           .col-md-8.col-md-offset-2
             .well
               h3.text-center Make an enquiry or arrange an appointment
-              form#cta_dl(netlify netlify-honeypot="name")
+              form#cta_dl(name="DLSpaContactForm" netlify netlify-honeypot="name")
                 .form-group.text-center
                   label(for="inputEmail") Your Email
                   input#inputEmail.text-center.form-control(type="email" name="email" placeholder="Your e-mail address ...")
-                  p(style="display: none;")
+                  span(style="display: none;")
                     label Name
                     input(name="name")
                   br
