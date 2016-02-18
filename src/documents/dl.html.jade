@@ -22,15 +22,14 @@ block content
     .contents-inner
       .container
         .row
-          .col-md-9
+          .col-md-9.col-sm-6
             h2 Flare, Thread, Spider and Varicose Vein Treatments
             p
-              | Within the relaxing environment of the Amida Spa Farnham we offer treatment for flare, thread and
+              | Within the relaxing environment of the Amida Spa Farnham I offer treatment for flare, thread, spider and
               | varicose veins. Open to David Lloyd members and Non-Members.
 
-          .col-md-3
+          .col-md-3.col-sm-6
             img(src="/img/dl/AmidaSpaLogo.png" width="150" alt="David Lloyd Amida Spa Logo")
-
 
         .row
           .col-md-12
@@ -60,24 +59,81 @@ block content
             p
               | When injected, the vein disappears, but then almost immediately becomes red and inflamed. The leg can
               | ache after treatment and this is a consequence of the irritant liquid working. The inflammation settles
-              | over a period of weeks and should settle completely by six weeks.
+              | over a period of weeks and should settle completely by six weeks. A final result may take up to six months.
 
             p
-              | Other risks include: allergic reactions, bruising, small skin sores or ulcers, darkening of the skin.
-
-            p
-              | There are limits to the area that can be treated in each sitting and sometimes an area will need to be treated more than once.
+              | There are limits to the area that can be treated in each sitting and sometimes an area will need
+              | to be treated more than once.
 
             h3 Cost and Booking
-            p No obligation, advisory consultation FREE
             p Injection Session Price £230
 
             p
-              | Treatment is provided by Vascular Specialists at Amida Spa Farnham. To arrange a consultation or to book a
+              | No obligation, advisory consultation is free. (A £10 booking fee is taken which is
+              | deducted from any further treatments or refunded if no treatment is required. To cancel
+              | a booking 48 hours notice is required)
+            
+
+            p
+              | I provide the treatment myself as a
+              &nbsp;
+              a(href="/#profile") Vascular Consultant Surgeon
+              &nbsp;
+              | at the Amida Spa Farnham. To arrange a
+              | consultation or to book a
               | treatment please contact the Spa reception team on 01252 731342 or email spa.farnham@davidlloyd.co.uk
 
         .row
-          .col-md-12
+          .col-md-5
             h2 Amida Spa Location
 
             iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.576082069231!2d-0.7792056842403079!3d51.226884479590005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x7cd4a632882ad25c!2sAmida+Spa+Farnham!5e0!3m2!1sen!2suk!4v1451776951490" width="400" height="300" frameborder="0" style="border:0" allowfullscreen)
+
+          mixin faq_item(id, title)
+            .panel.panel-default
+              .panel-heading
+                h4.panel-title
+                  a(data-toggle='collapse', data-parent='#faq_accordion', href='#faq_collapse#{id}') #{title}
+
+              div(id='faq_collapse#{id}').panel-collapse.collapse
+                .panel-body
+                  if block
+                    block
+                  else
+                    p Error: No answer
+
+          .col-md-7
+            h2 Frequently Asked Questions
+            #faq_accordion.panel-group
+
+              +faq_item(1, 'How does sclerotherapy work ?')
+                | Using a very fine needle, I can inject the sclerosant into the veins you wish treated.
+                | The sclerosant irritates the vein and causes it to scar and then shrink away. The vein then
+                | fades over time.
+
+              +faq_item(2, 'Do I need to stay after treatment ?')
+                | No. Straight after the treatment you can walk out and you will be able to drive yourself
+                | home if required. You leg may ache a little due to the irritation. You can take some paracetamol
+                | to help, but the majority of patients do not need this either.
+
+              +faq_item(3, 'How long does it take to see a result ?')
+                | Initially, the treated veins will look worse before they look better as the injection causes
+                | an irritation to do it's job. The process of scarring and shrinking away takes between 4-6 weeks
+                | but can take upto 6 months.
+
+              +faq_item(4, 'Should I wear anything special ?')
+                | I recommend that you don't wear light or white clothing on your legs as sometimes the injection site
+                | may bleed a little. Looser clothes are better as you may find that more comfortable.
+
+              +faq_item(5, 'Are there any risks from sclerotherapy ?')
+                p
+                  | Some patients experience bruising around the injection site or may get small skin sores or ulcers. This
+                  | is more common if the ankle area is treated.
+
+                p
+                  | The skin area over the injection site can become darken or stained with a brownish discolouration. If
+                  | this occurs it usually fades, but can take up to a year.
+
+                p
+                  | Any harmful risks of sclerotherapy are rare. Some people will be allergic to the solution and may
+                  | get an allergic reactions. Under very rare circumstances DVT and visual disturbances have been reported.
