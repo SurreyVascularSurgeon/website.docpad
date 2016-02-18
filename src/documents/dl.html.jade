@@ -170,19 +170,29 @@ block content
           .col-md-12
             hr
 
-        .row
-          .col-md-8.col-md-offset-2
-            .well
-              h3.text-center Make an enquiry or arrange an appointment
-              form#cta_dl(name="DLSpaContactForm" netlify netlify-honeypot="name")
-                .form-group.text-center
-                  label(for="inputEmail") Your Email
-                  input#inputEmail.text-center.form-control(type="email" name="email" placeholder="Your e-mail address ...")
-                  span(style="display: none;")
-                    label Name
-                    input(name="name")
-                  br
-                  button(onclick="ga('send', 'event', 'CTASpa', 'form', 'Spa');" )#sendcta.btn.btn-success Send
-                  br
-                  h4 Or
-                  h4 Call <a href="tel:01252 731342" onClick="ga('send', 'event', 'CTASpa', 'call', 'bottom');" >01252 731342</a>
+        .row.well
+          .col-md-12
+            .row
+              .col-md-6.col-md-offset-3
+                h3.text-center Make an enquiry or arrange an appointment
+                form#cta_dl(name="DLSpaContactForm" netlify netlify-honeypot="name")
+                  .form-group.text-center
+                    //- label(for="inputEmail") Your Email
+                    input#inputEmail.text-center.form-control(type="email" name="email" placeholder="Email ...")
+                    span(style="display: none;")
+                      label Name
+                      input(name="name")
+
+                  .form-group.text-center
+                    select(name="ContactReason").form-control
+                      option(selected disabled) (Please select an option...)
+                      option I would like to arrange an appointment
+                      option I would like to get more information
+                      option I have a question to ask
+                      option Other
+
+                  .form-group.text-center
+                    button(onclick="ga('send', 'event', 'CTASpa', 'form', 'Spa');" )#sendcta.btn.btn-success Send
+                    br
+                    h4 Or
+                    h4 Call <a href="tel:01252 731342" onClick="ga('send', 'event', 'CTASpa', 'call', 'bottom');" >01252 731342</a>
