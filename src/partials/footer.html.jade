@@ -50,7 +50,7 @@ section#footer
       .col-md-12
         ul.text-center.footer-social
           li.socials-icons
-            a.facebook(href='https://www.facebook.com/surreyvascularsurgeon', data-toggle='tooltip', title='Facebook')
+            a.facebook(href='https://www.facebook.com/surreyvascularsurgeon', data-toggle='tooltip', title='Facebook' onClick="ga('send', 'social', 'facebook', 'view_page', #{document.url});" )
               i.fa.fa-facebook
 
           li.socials-icons
