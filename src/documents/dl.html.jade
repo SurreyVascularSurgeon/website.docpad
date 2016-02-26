@@ -22,18 +22,16 @@ block content
     .contents-inner
       .container
         .row
-          .col-md-9.col-sm-6
+          .col-md-12
+            img.img-responsive.pull-right(src="/img/spider_veins.jpg" width="150" alt="Spider Veins")
+
             h2 <span itemprop="name">Spider, Thread, Flare, and Varicose Vein</span> Treatments
             p
               | Within the relaxing environment of the Amida Spa Farnham I offer treatment for flare, thread, spider and
               | varicose veins. Open to David Lloyd members as well as Non-Members.
 
-          .col-md-3.col-sm-6
-            img(src="/img/dl/AmidaSpaLogo.png" width="150" alt="David Lloyd Amida Spa Logo")
-
-        .row
-          .col-md-12
-            img.img-responsive.pull-right(src="/img/dl/amida-spa-farnham-room.png" width="300" alt="David Lloyd Amida Spa Rooms")
+            //- .col-md-3.col-sm-6
+            //-   img(src="/img/dl/AmidaSpaLogo.png" width="150" alt="David Lloyd Amida Spa Logo")
 
             h3 What are Spider, Flare Veins
             p(itemprop="signOrSymptom" itemscope itemtype="http://schema.org/MedicalSymptom")
@@ -60,6 +58,8 @@ block content
               | upon the lining of the vein to cause it to seal shut, eliminating the visibility of the  vein. Sclerotherapy
               | can be quickly performed at our clinic and no anaesthesia is required.
 
+        .row
+          .col-md-12
             h3 What to Expect
             p
               | When injected, the vein disappears, but then almost immediately becomes red and inflamed. The leg can
@@ -67,11 +67,12 @@ block content
               | over a period of days and the vein then becomes scarred and shrinks over weeks. It should settle
               | completely by six weeks. A final result may take up to six months.
 
+            img.img-responsive.pull-right(src="/img/dl/amida-spa-farnham-room.png" width="300" alt="David Lloyd Amida Spa Rooms")
+
             h3 Cost and Booking
             p Injection Session Price £230
 
-            p
-              | No obligation, advisory consultation is FREE.
+            p No obligation, advisory consultation is FREE.
 
             p.small
               | (A £10 booking fee is taken which is
@@ -87,6 +88,10 @@ block content
               | consultation or to book a
               | treatment please contact the Spa reception team on <a href="tel:01252 731342" onClick="ga('send', 'event', 'CTASpa', 'call', 'top');">01252 731342</a> or
               | email <a href="mailto:spa.farnham@davidlloyd.co.uk" onclick="ga('send', 'event', 'CTASpa', 'email', 'spa.farnham@davidlloyd.co.uk');">spa.farnham@davidlloyd.co.uk</a>
+
+        .row(style="padding-top: 1em; padding-bottom: 1em;")
+          .col-md-12
+            hr
 
         .row
           .col-md-5
@@ -191,8 +196,8 @@ block content
                 h3.text-center Make an enquiry or arrange an appointment
                 form#cta_dl(name="DLSpaContactForm" netlify netlify-honeypot="name")
                   .form-group.text-center
-                    //- label(for="inputEmail") Your Email
-                    input#inputEmail.text-center.form-control(type="email" name="email" placeholder="Email ...")
+                    label(for="inputEmail") Your Email
+                    input#inputEmail.text-center.form-control(type="email" name="email" placeholder="name@email.com")
                     span(style="display: none;")
                       label Name
                       input(name="name")
