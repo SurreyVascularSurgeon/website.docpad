@@ -523,6 +523,13 @@ section.contact-us-header {
     padding: 0;
 }
 
+#footer a {
+  color: white;
+}
+#footer a:hover {
+  color: $greyish-green-0;
+}
+
 .socials-icons a
 {
     width: 40px;
