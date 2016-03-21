@@ -79,4 +79,4 @@ html
 
     != partial('associations')
     
-    != getBlock('scripts').add(['/js/jquery.min.js','/js/bootstrap.min.js'].concat(document.scripts||[])).toHTML()
+    != getBlock('scripts').add(['/js/jquery.min.js','/js/bootstrap.min.js','/js/mailgun_validator.js'].concat(document.scripts||[])).toHTML()
