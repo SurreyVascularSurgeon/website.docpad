@@ -8,6 +8,8 @@ description: "Thread and flare vein clinic run at the Amida Spa David Lloyd, Far
 ---
 
 block content
+  != partial('ga_conversions_spa')
+
   section.heading-dl
     .heading-inner-dl
       .container
@@ -211,7 +213,7 @@ block content
                       option Other
 
                   .form-group.text-center
-                    button(onclick="ga('send', 'event', 'CTASpa', 'form', 'Spa');" )#sendcta.btn.btn-success Send
+                    button(onclick="ga('send', 'event', 'CTASpa', 'form', 'Spa'); goog_report_conversion ('https://www.surreyvascularsurgeon.com/dl');" )#sendcta.btn.btn-success Send
                     br
                     h4 Or
-                    h4 Call <a href="tel:01252 731342" onClick="ga('send', 'event', 'CTASpa', 'call', 'bottom');" >01252 731342</a>
+                    h4 Call <a href="tel:01252 731342" onClick="ga('send', 'event', 'CTASpa', 'call', 'bottom'); goog_report_conversion ('https://www.surreyvascularsurgeon.com/dl');" >01252 731342</a>
