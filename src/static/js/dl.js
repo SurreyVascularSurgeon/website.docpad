@@ -51,12 +51,11 @@ $( document ).ready(function() {
   });
 
   $('#cta_dl').submit(function(e) {
-    e.preventDefault();
-
     if( GEmailValidated == false || $('#inputEmail').val() == $('#inputEmail').attr('placeholder')) {
       $('#inputEmailGroup').addClass('has-error');
       $('#inputEmailStatus').html("A valid email is required.");
       $('#inputEmailStatus').show();
+      e.preventDefault();
       return false;
     } 
 
@@ -65,18 +64,20 @@ $( document ).ready(function() {
     var $form = $(this);
     $.post($form.attr("action"), $form.serialize())
       .done(function(e){
+        console.log("post success...");
         $('#cta_display').hide();
         $('#cta_sent').show();
-        ga('send', 'event', 'CTASpa', 'call', 'bottom');
-        goog_report_conversion ('https://www.surreyvascularsurgeon.com/dl');
+        //ga('send', 'event', 'CTASpa', 'call', 'bottom');
+        //goog_report_conversion ('https://www.surreyvascularsurgeon.com/dl');
       })
       .fail(function(e){
+        console.log("post fail...");
         $('#cta_failed').show();
         $("#sendcta").button('reset')
       })
       ;
 
-    return false;
+    e.preventDefault();
   });
 
 }); //- end of document ready
