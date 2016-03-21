@@ -1,17 +1,22 @@
 $( document ).ready(function() {
+  var GEmailValidated = false;
 
   $('#inputEmailStatus').hide();
+  $('#cta_sent').hide();
+  $('#cta_failed').hide();
 
   $('#inputEmail').mailgun_validator({
    api_key: 'pubkey-bb80e276fcdcfecf3c1e62a5b7edfa29',
    //in_progress: in_progress_callback, // called when request is made to validator
    //- The API call is successful
    success: function(data){
-      console.log(data);
-
+      //console.log(data);
+      GEmailValidated = data.is_valid;
+      
       var suggestions = (data.did_you_mean) ? "<em>did you mean " + data.did_you_mean + "</em>" : "";
 
       if( data.is_valid ) {
+
         $('#inputEmailGroup').removeClass('has-error');
         $('#inputEmailGroup').addClass('has-success');
         if(suggestions.length>0) {
@@ -48,22 +53,28 @@ $( document ).ready(function() {
   $('#cta_dl').submit(function(e) {
     e.preventDefault();
 
-    if( $('#inputEmail').val() == "" || $('#inputEmail').attr('placeholder')) {
+    if( GEmailValidated == false || $('#inputEmail').val() == $('#inputEmail').attr('placeholder')) {
       $('#inputEmailGroup').addClass('has-error');
       $('#inputEmailStatus').html("A valid email is required.");
       $('#inputEmailStatus').show();
       return false;
     } 
 
-    $("#cta_dl_send").button('loading');
+    $("#sendcta").button('loading');
 
     var $form = $(this);
-    $.post($form.attr("action"), $form.serialize()).then(
-      function() {
-        ga('send', 'event', 'CTASpa', 'form', 'Spa');
-        goog_report_conversion('https://www.surreyvascularsurgeon.com/dl');
-        alert("Thank you!");
-      });
+    $.post($form.attr("action"), $form.serialize())
+      .done(function(e){
+        $('#cta_display').hide();
+        $('#cta_sent').show();
+        ga('send', 'event', 'CTASpa', 'call', 'bottom');
+        goog_report_conversion ('https://www.surreyvascularsurgeon.com/dl');
+      })
+      .fail(function(e){
+        $('#cta_failed').show();
+        $("#sendcta").button('reset')
+      })
+      ;
 
     return false;
   });
