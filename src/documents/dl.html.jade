@@ -88,8 +88,8 @@ block content
               | &nbsp;
               | at the Amida Spa, Farnham. To arrange a
               | consultation or to book a
-              | treatment please contact the Spa reception team on <a href="tel:01252 731342" onClick="ga('send', 'event', 'CTASpa', 'call', 'top');">01252 731342</a> or
-              | email <a href="mailto:spa.farnham@davidlloyd.co.uk" onclick="ga('send', 'event', 'CTASpa', 'email', 'spa.farnham@davidlloyd.co.uk');">spa.farnham@davidlloyd.co.uk</a>
+              | treatment please contact the Spa reception team on <a href="tel:01252 731342" onClick="ga('send', 'event', 'CTASpa', 'call', 'top'); goog_report_conversion ('https://www.surreyvascularsurgeon.com/dl');">01252 731342</a> or
+              | email <a href="mailto:spa.farnham@davidlloyd.co.uk" onclick="ga('send', 'event', 'CTASpa', 'email', 'spa.farnham@davidlloyd.co.uk'); goog_report_conversion ('https://www.surreyvascularsurgeon.com/dl');">spa.farnham@davidlloyd.co.uk</a>
 
         .row(style="padding-top: 1em; padding-bottom: 1em;")
           .col-md-12
@@ -234,3 +234,34 @@ block content
                 #cta_sent.text-center
                   h3 Thank you for contacting us
                   p We will get back to you as soon as possible.
+
+  //
+    Google Code for Website Contact Conversion Page
+    In your html page, add the snippet and call
+    goog_report_conversion when someone clicks on the
+    chosen link or button. 
+  script(type='text/javascript').
+    /* <![CDATA[ */
+    goog_snippet_vars = function() {
+      var w = window;
+      w.google_conversion_id = 947644472;
+      w.google_conversion_label = "T6o1COOIoGYQuNDvwwM";
+      w.google_remarketing_only = false;
+    }
+    // DO NOT CHANGE THE CODE BELOW.
+    goog_report_conversion = function(url) {
+      goog_snippet_vars();
+      window.google_conversion_format = "3";
+      var opt = new Object();
+      opt.onload_callback = function() {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      }
+      var conv_handler = window['google_trackConversion'];
+      if (typeof(conv_handler) == 'function') {
+        conv_handler(opt);
+      }
+    }
+    /* ]]> */
+  script(type='text/javascript', src='//www.googleadservices.com/pagead/conversion_async.js')

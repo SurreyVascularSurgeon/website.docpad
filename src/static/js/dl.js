@@ -12,7 +12,7 @@ $( document ).ready(function() {
    success: function(data){
       //console.log(data);
       GEmailValidated = data.is_valid;
-      
+
       var suggestions = (data.did_you_mean) ? "<em>did you mean " + data.did_you_mean + "</em>" : "";
 
       if( data.is_valid ) {
@@ -20,12 +20,12 @@ $( document ).ready(function() {
         $('#inputEmailGroup').removeClass('has-error');
         $('#inputEmailGroup').addClass('has-success');
         if(suggestions.length>0) {
-          $('#inputEmailStatus').html("Email valid but, " + suggestions);          
+          $('#inputEmailStatus').html("Email valid but, " + suggestions);
           $('#inputEmailStatus').show();
         }
         else {
-          $('#inputEmailStatus').html("");          
-          $('#inputEmailStatus').hide();          
+          $('#inputEmailStatus').html("");
+          $('#inputEmailStatus').hide();
         }
       }
       else {
@@ -57,7 +57,7 @@ $( document ).ready(function() {
       $('#inputEmailStatus').show();
       e.preventDefault();
       return false;
-    } 
+    }
 
     $("#sendcta").button('loading');
 
