@@ -217,6 +217,14 @@ block content
                         label Name
                         input(name="name")
 
+                    #inputTelGroup.form-group.text-center
+                      label(for="inputTel") Contact Telephone Number
+                      .input-group
+                        span.input-group-addon
+                          span.glyphicon.glyphicon-phone-alt
+                        input#inputTel.text-center.form-control(type="tel" name="telephone" minlength="7" placeholder="" required)
+                      span#inputTelStatus.help-block  
+
                     .form-group.text-center
                       select(name="ContactReason").form-control
                         option(selected disabled) (Please select an option...)
