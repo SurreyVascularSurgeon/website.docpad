@@ -205,17 +205,13 @@ block content
 
                 #cta_display
                   h3.text-center Make an enquiry or arrange an appointment
-                  form#cta_dl(name="DLSpaContactForm" action='#' netlify netlify-honeypot="name")
+                  form#cta_dl(name="DLSpaContactForm" action='#' netlify netlify-honeypot="address_ignore")
                     #inputEmailGroup.form-group.text-center
                       label(for="inputEmail") Your Email
                       .input-group
                         span.input-group-addon @
                         input#inputEmail.text-center.form-control(type="email" name="email" minlength="5" placeholder="name@email.com" required)
                       span#inputEmailStatus.help-block  
-
-                      span(style="display: none;")
-                        label Name
-                        input(name="name")
 
                     #inputTelGroup.form-group.text-center
                       label(for="inputTel") Contact Telephone Number
@@ -225,6 +221,14 @@ block content
                         input#inputTel.text-center.form-control(type="tel" name="telephone" minlength="7" placeholder="" required)
                       span#inputTelStatus.help-block  
 
+                    #inputNameGroup.form-group.text-center
+                      label(for="inputName") Your Name
+                      .input-group
+                        span.input-group-addon
+                          span.glyphicon.glyphicon-user
+                        input#inputName.text-center.form-control(type="text" name="name" minlength="3" placeholder="")
+                      span#inputNameStatus.help-block  
+
                     .form-group.text-center
                       select(name="ContactReason").form-control
                         option(selected disabled) (Please select an option...)
@@ -232,6 +236,10 @@ block content
                         option I would like to get more information
                         option I have a question to ask
                         option Other
+
+                    span(style="display: none;")
+                      label Name
+                      input(name="address_ignore")
 
                     .form-group.text-center
                       button#sendcta.btn.btn-success(type="submit" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Sending ..." ) Send
