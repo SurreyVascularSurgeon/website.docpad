@@ -25,7 +25,7 @@ docpadConfig = {
 			keywords: """
 				vascular, veins, varicose, varicose veins, vein removal, thread veins, evlt, rfa, radiofrequency, carotid, stroke, aaa, aneursym
 				"""
-			
+
 		# -----------------------------
 		# Helper Functions
 
@@ -55,7 +55,7 @@ docpadConfig = {
 		# Define a custom collection for cleanurls that only includes documents we want
     	cleanurls: ->
         	@getCollection('html').findAllLive(cleanurls: $eq: true)
-        	
+
 	plugins:
 		ghpages:
 			deployRemote: 'target'
@@ -104,6 +104,10 @@ docpadConfig = {
 				plugins:
 					cleancss:
 						enabled: true
+			production:
+				plugins:
+					livereload:
+          	enabled: false
 }
 
 # Export the DocPad Configuration
