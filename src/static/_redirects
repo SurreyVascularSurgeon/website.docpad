@@ -1,5 +1,6 @@
 # Simple redirects from one path to another
 /home       /
+/feedback   http://search.google.com/local/writereview?placeid=ChIJ2-LKPDfVdUgRNh6xq5z95Lg
 # /dl			/dl.html
 /aaa 		/abdominal-aortic-aneurysm.html
 /aaa.html	/abdominal-aortic-aneurysm.html
