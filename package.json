@@ -1,21 +1,20 @@
 {
   "name": "surreyvascularsurgeon",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Surrey Vascular Surgeon Website",
   "repository": "https://github.com/SurreyVascularSurgeon/website.docpad.git",
   "license": "Private, no reproduction",
   "dependencies": {
-    "docpad": "~6.79.4",
-    "docpad-plugin-cleancss": "~2.1.0",
-    "docpad-plugin-ghpages": "~2.6.1",
-    "docpad-plugin-grunt": "~2.2.1",
-    "docpad-plugin-jade": "~2.10.0",
-    "docpad-plugin-livereload": "~2.9.0",
-    "docpad-plugin-marked": "~2.4.0",
-    "docpad-plugin-nodesass": "~2.8.2",
-    "docpad-plugin-partials": "~2.11.0",
-    "docpad-plugin-sitemap": "~2.4.0",
-    "marked": "0.3.x"
+    "docpad": "6.79.x",
+    "docpad-plugin-cleancss": "2.x.x",
+    "docpad-plugin-grunt": "2.x.x",
+    "docpad-plugin-jade": "2.x.x",
+    "docpad-plugin-livereload": "2.x.x",
+    "docpad-plugin-marked": "2.x.x",
+    "docpad-plugin-nodesass": "2.x.x",
+    "docpad-plugin-partials": "2.x.x",
+    "docpad-plugin-sitemap": "2.x.x",
+    "marked": "0.x.x"
   },
   "main": "node_modules/.bin/docpad-server",
   "scripts": {

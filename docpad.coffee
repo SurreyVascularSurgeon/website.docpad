@@ -57,9 +57,6 @@ docpadConfig = {
         	@getCollection('html').findAllLive(cleanurls: $eq: true)
 
 	plugins:
-		ghpages:
-			deployRemote: 'target'
-			deployBranch: 'master'
 		nodesass:
 			outputStyle: 'compressed'	# nested / compressed
 		# grunt:
