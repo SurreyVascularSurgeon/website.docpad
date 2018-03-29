@@ -14,7 +14,7 @@
     "docpad-plugin-nodesass": "2.x.x",
     "docpad-plugin-partials": "2.x.x",
     "docpad-plugin-sitemap": "2.x.x",
-    "marked": "0.x.x"
+    "marked": "0.3.x"
   },
   "main": "node_modules/.bin/docpad-server",
   "scripts": {
