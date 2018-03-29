@@ -1,6 +1,3 @@
-push-live:
-	docpad deploy-ghpages --env static
-
 generate:
 	docpad generate --env static
 
