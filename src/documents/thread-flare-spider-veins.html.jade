@@ -1,0 +1,134 @@
+---
+title: "Thread, flare or spider veins"
+layout: "treatment"
+scripts: ['']
+priority: 0.8
+description: "Thread, spider and flare vein treatement with micro sclerotherapy. Farnham, Surrey, Hampshire"
+---
+
+block content
+  section.content-dl(itemscope itemtype="http://schema.org/MedicalCondition")
+    .contents-inner
+      .container
+        .row
+          .col-md-12
+            img.img-responsive.pull-right(src="/img/spider_veins.jpg" width="150" alt="Spider Veins")
+
+            h2 <span itemprop="name">Spider, Thread, Flare, and Varicose Vein</span> Treatments
+
+            h3 What are Spider, Flare Veins
+            p(itemprop="signOrSymptom" itemscope itemtype="http://schema.org/MedicalSymptom")
+              | Flare veins (also known as thread or broken veins) are tiny surface veins that can appear blue, red
+              | or pale green. They can be on any part of the body but are most commonly treated on the legs and face.
+              | They 
+              span(itemprop="name") ache 
+              | and sometimes 
+              span(itemprop="name") itch.
+
+            p We offer treatment with Micro Sclerotherapy.
+
+            h3 What are Varicose Veins
+            p
+              | Varicose veins are bigger, blue veins that often bulge but can be flat. They also occur on the legs
+              | and are often caused by a defect in the veins. If the varicose veins are minor they can be treated with
+              | injection sclerotherapy too. This will be discussed during your consultation.
+
+            h3(itemprop="possibleTreatment" itemscope itemtype="http://schema.org/MedicalTherapy")
+              span(itemprop="name") Vein Sclerotherapy
+            p
+              | Sclerotherapy involves injecting a small volume of a irritant liquid into affected veins. The liquid acts
+              | upon the lining of the vein to cause it to seal shut, eliminating the visibility of the  vein. Sclerotherapy
+              | can be quickly performed at our clinic and no anaesthesia is required.
+
+            h3 What to Expect
+            p
+              | When injected, the vein disappears, but then almost immediately becomes red and inflamed. The leg can
+              | ache after treatment and this is a consequence of the irritant liquid working. The inflammation
+              | settles over a period of days and the vein then becomes scarred and shrinks over weeks.
+              | It then takes a number of weeks for the result to be evident, often 6-8 weeks. However, a final result may take many months.
+
+            h2 Frequently Asked Questions
+
+            mixin faq_item(id, title)
+              .panel.panel-default
+                .panel-heading
+                  h4.panel-title
+                    a(data-toggle='collapse', data-parent='#faq_accordion', href='#faq_collapse#{id}') #{title}
+
+                div(id='faq_collapse#{id}').panel-collapse.collapse
+                  .panel-body
+                    if block
+                      block
+                    else
+                      p Error: No answer
+
+            #faq_accordion.panel-group
+
+              +faq_item('_how_does_sclerotherapy_work', 'How does sclerotherapy work ?')
+                p
+                  | Using a very fine needle, I can inject the sclerosant into the veins you wish treated.
+                  | The sclerosant irritates the vein and causes it to scar and then shrink away. The vein then
+                  | fades over time.
+
+              +faq_item('_treatment_areas', 'Which areas can be treated ?')
+                p
+                  | Any area can be treated, but most commonly the legs and face are affected and therefore
+                  | treated. If you need treatment to your face we recommend that a local anaesthetic cream
+                  | is applied prior to sclerotherapy as the face is a sensitive area.
+
+              +faq_item('_need_to_stay', 'Do I need to stay after treatment ?')
+                p
+                  | No. Straight after the treatment you can walk out and you will be able to drive yourself
+                  | home if required. You leg may ache a little due to the irritation. You can take some paracetamol
+                  | to help, but the majority of patients do not need this either.
+
+              +faq_item('_results', 'How long does it take to see a result ?')
+                p
+                  | Initially, the treated veins will look worse before they look better as the injection causes
+                  | an irritation to do it's job. The process of scarring and shrinking away takes between 4-6 weeks
+                  | but can take up to 6 months.
+
+              +faq_item('_clothing', 'Should I wear anything special ?')
+                p
+                  | It is  better if you don't wear light or white clothing on your legs as sometimes the injection site
+                  | may bleed a little. Looser clothes are better as you may find that more comfortable afterwards.
+
+              +faq_item('_preparation', 'Do I need to prepare prior to treatment ?')
+                p
+                  | There is nothing special you need to do. The sclerosant works by inflaming the vein so I recommend
+                  | avoiding anti-inflammatory medicines (such as aspirin, ibuprofen) 48 hours before and after treatment.
+
+              +faq_item('_things_to_avoid', 'Should I avoid anything after treatment ?')
+                p
+                  | You will be able to walk out after the treatment and resume normal activities straight away. I
+                  | recommend not soaking in a hot bath, going to a Spa or direct sun exposure for 1 week after the
+                  | treatment as this can dilate your veins and may cause the treatment not to work. You can resume
+                  | exercise 24 hours afterwards and it is safe to fly.
+
+              +faq_item('_is_sclerotherapy_new', 'Is sclerotherapy a new treatment ?')
+                p
+                  | Sclerotherapy for veins is not a new treatment. It has been used since the 1930s for treatment and a
+                  | number of research papers have shown that it works.
+
+              +faq_item('_is_sclerotherapy_effctive', 'Is sclerotherapy effective ?')
+                p
+                  | Studies have shown that around 70% of veins treated this way show a marked improvement. It is common
+                  | to require more than one session for treatment. A maximum dose restricts the total area that can be
+                  | treated in one sitting. The area that can be treated will be discussed with you prior to any treatment
+                  | commencing.
+
+              +faq_item('_sclerotherapy_risks', 'Are there any risks from sclerotherapy ?')
+                P
+                  | After treatment your legs may ache or feel itchy. The site of injection can become red and a
+                  | little swollen. This should settle within days.
+                p
+                  | Some patients experience bruising around the injection site or may get small skin sores or ulcers. This
+                  | is more common if the ankle area is treated.
+
+                p
+                  | The skin area over the injection site can become darken or stained with a brownish discolouration. If
+                  | this occurs it usually fades, but can take up to a year.
+
+                p
+                  | Any harmful risks of sclerotherapy are rare. Some people will be allergic to the solution and may
+                  | get an allergic reactions. Under very rare circumstances DVT and visual disturbances have been reported.
